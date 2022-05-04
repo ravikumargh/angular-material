@@ -5,6 +5,7 @@ import { LayoutComponent } from './component/layout/layout.component';
 import { HeaderModule } from './header/header.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidebarComponent } from './component/sidebar/sidebar.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 
 
@@ -12,6 +13,7 @@ import { SidebarComponent } from './component/sidebar/sidebar.component';
   declarations: [
     LayoutComponent,
     SidebarComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,

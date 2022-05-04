@@ -25,6 +25,13 @@ export const AppRoutes: Routes = [
           import("./feature/dashboard/dashboard.module").then(
             (m) => m.DashboardModule
           ),
+      },
+      {
+        path: "table",
+        loadChildren: () =>
+          import("./feature/table/table.module").then(
+            (m) => m.TableModule
+          ),
       }
        
     ],
@@ -50,7 +57,9 @@ export const AppRoutes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(AppRoutes)],
+  imports: [RouterModule.forRoot(AppRoutes, {
+    useHash: true
+},)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

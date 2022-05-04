@@ -1,1 +1,36 @@
-<p>header works!</p>
+<!-- <mat-toolbar class="header">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar> -->
+
+  <mat-toolbar class="header">
+
+    <div class="header__title">
+      <button class="header__title-button" mat-mini-fab (click)="openMenu()">
+        <mat-icon *ngIf="!isMenuOpened" class="header__title-button-icon">menu</mat-icon>
+        <mat-icon *ngIf="isMenuOpened" class="header__title-button-icon">arrow_back</mat-icon>
+      </button>
+      <h6 class="header__title-text">Angular Material</h6>
+    </div>
+  
+    <div class="header-toolbar">
+      
+      <app-search></app-search>
+      <app-notifications></app-notifications>
+      <app-email></app-email>
+      <app-user></app-user>
+      <!-- <app-email [emails]="emails$ | async"></app-email>
+      <app-user [user]="user$ | async" (signOut)="signOut()"></app-user> -->
+    </div>
+  
+  </mat-toolbar>
+  

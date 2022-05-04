@@ -2,20 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './component/layout/layout.component';
-import { HeaderComponent } from './component/header/header.component';
 import { HeaderModule } from './header/header.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    HeaderComponent
+    SidebarComponent,
   ],
   imports: [
     CommonModule,
     HeaderModule,
-    RouterModule
+    RouterModule,
+    MatSidenavModule
   ],
   exports: [
     LayoutComponent,
